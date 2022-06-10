@@ -29,12 +29,6 @@
         "audios"
       ]
     },
-    "startedDate": {
-      "type": "datetime"
-    },
-    "progress": {
-      "type": "integer"
-    },
     "lessons": {
       "type": "relation",
       "relation": "oneToMany",

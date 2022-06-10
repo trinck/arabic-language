@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learneds",
+  "info": {
+    "singularName": "learned",
+    "pluralName": "learneds",
+    "displayName": "Learned"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startedAt": {
+      "type": "datetime"
+    },
+    "progress": {
+      "type": "integer"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::course.course"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}
