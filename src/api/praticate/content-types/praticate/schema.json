@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "praticates",
+  "info": {
+    "singularName": "praticate",
+    "pluralName": "praticates",
+    "displayName": "Praticate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "unit_exersices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::unit-exersice.unit-exersice",
+      "inversedBy": "praticates"
+    },
+    "exersice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exersice.exersice",
+      "inversedBy": "praticates"
+    }
+  }
+}

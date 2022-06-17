@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exersices",
+  "info": {
+    "singularName": "exersice",
+    "pluralName": "exersices",
+    "displayName": "Exersice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "started": {
+      "type": "boolean"
+    },
+    "unit_exersices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit-exersice.unit-exersice",
+      "mappedBy": "exersice"
+    },
+    "praticates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::praticate.praticate",
+      "mappedBy": "exersice"
+    }
+  }
+}

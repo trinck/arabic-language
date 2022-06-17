@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_exersices",
+  "info": {
+    "singularName": "unit-exersice",
+    "pluralName": "unit-exersices",
+    "displayName": "unitExersice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "response": {
+      "type": "string"
+    },
+    "exersice": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exersice.exersice",
+      "inversedBy": "unit_exersices"
+    },
+    "praticates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::praticate.praticate",
+      "inversedBy": "unit_exersices"
+    }
+  }
+}

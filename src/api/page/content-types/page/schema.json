@@ -15,9 +15,6 @@
     "pageNum": {
       "type": "integer"
     },
-    "viewed": {
-      "type": "boolean"
-    },
     "content": {
       "type": "relation",
       "relation": "oneToOne",
@@ -27,6 +24,12 @@
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::lesson.lesson",
+      "inversedBy": "pages"
+    },
+    "learneds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learned.learned",
       "inversedBy": "pages"
     }
   }
