@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageNum": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::content.content"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::lesson.lesson",
+      "inversedBy": "pages"
+    },
+    "learneds": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::learned.learned",
+      "inversedBy": "pages"
+    }
+  }
+}

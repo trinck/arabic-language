@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appusers",
+  "info": {
+    "singularName": "appuser",
+    "pluralName": "appusers",
+    "displayName": "Appuser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lessons",
+  "info": {
+    "singularName": "lesson",
+    "pluralName": "lessons",
+    "displayName": "Lesson",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "started": {
+      "type": "boolean"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locked": {
+      "type": "boolean"
+    },
+    "pages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::page.page",
+      "mappedBy": "lesson"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "lessons"
+    }
+  }
+}
